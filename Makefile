@@ -1,13 +1,13 @@
 ##############################  SOURCE & OBJETS  ###############################
-INCLUDES = Makefile Span.hpp
+INCLUDES = Makefile
 
-SRCS = main.cpp Span.cpp
+SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
 ################################  VARIABLES  ###################################
 
-NAME = Span
+NAME = Mutant
 
 RM = rm -f
 
