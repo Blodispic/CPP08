@@ -14,7 +14,7 @@
 
 int main()
 {
-    std::vector<int> vector_int;
+    std::vector<int>    vector_int;
     std::list<int>      list_int;
 
     for (double d = 0.1; d < 21; d++)

@@ -1,7 +1,7 @@
 ##############################  SOURCE & OBJETS  ###############################
-INCLUDES = Makefile easyfind.hpp
+INCLUDES = Makefile Span.hpp
 
-SRCS = main.cpp
+SRCS = main.cpp Span.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
