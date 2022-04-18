@@ -57,12 +57,19 @@ void    Span::addNumber(int const& nb)
 
 unsigned int Span::shortestSpan()
 {
+
     if (this->_container.size() <= 1 || this->_max_nb <= 1)
         throw std::exception();
-    std::vector<int> tmp(2);
+    std::vector<int> tmp(this->_max_nb);
 
     std::partial_sort_copy(this->_container.begin(), this->_container.end(), tmp.begin(), tmp.end());
-    return (tmp[1] - tmp[0]);
+    int min = tmp[1] - tmp[0];
+    for (unsigned int i = 0; i < this->_max_nb - 1; i++)
+    {
+        if (min > tmp[i + 1] - tmp[i])
+            min = tmp[i + 1] - tmp[i];
+    }
+    return (min);
 }
 
 unsigned int Span::longestSpan()
