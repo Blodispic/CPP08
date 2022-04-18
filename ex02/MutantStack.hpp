@@ -23,11 +23,28 @@ class MutantStack: public std::stack<T>
     
     public:
     MutantStack<T>() {};
-    MutantStack<T>(MutantStack<T> const& src) {};
-    ~MutantStack<T>() {};
-    std::stack<T>::container_type::iterator it;
+    MutantStack<T>(MutantStack<T> const& src)
+    {
+        this = *src;
+    }
 
-    MutantStack<T> & operator=(MutantStack<T> const& rhs) {};
+    ~MutantStack<T>() {};
+    typedef typename std::stack<T>::container_type::iterator iterator;
+    
+    iterator  begin(void)
+    {
+        return (this->c.begin());
+    }
+
+    iterator  end(void)
+    {
+        return (this->c.end());
+    }
+
+    MutantStack<T> & operator=(MutantStack<T> const& rhs)
+    {
+        this = *rhs;
+    }
 };
 
 #endif

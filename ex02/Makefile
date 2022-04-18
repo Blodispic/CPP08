@@ -1,5 +1,5 @@
 ##############################  SOURCE & OBJETS  ###############################
-INCLUDES = Makefile
+INCLUDES = Makefile MutantStack.hpp
 
 SRCS = main.cpp
 
